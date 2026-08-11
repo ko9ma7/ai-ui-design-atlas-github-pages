@@ -8,7 +8,7 @@
 
 GitHub Pages를 활성화하면 아래 형식으로 공개됩니다.
 
-`https://YOUR_GITHUB_ID.github.io/YOUR_REPOSITORY/`
+`(https://ko9ma7.github.io/ai-ui-design-atlas-github-pages/)`
 
 ## 주요 기능
 
