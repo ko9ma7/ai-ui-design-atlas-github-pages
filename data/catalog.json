@@ -1,0 +1,1482 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-28",
+  "project": "AI UI Design Atlas",
+  "policy": {
+    "model": "catalog-first / pointer-first / vendor-last",
+    "redistribution": "Unknown or custom-license resources are link-only until reviewed.",
+    "dataSource": "Deep research reports supplied by repository owner; upstream license/status must be revalidated before vendoring."
+  },
+  "resources": [
+    {
+      "id": "nextlevelbuilder-ui-ux-pro-max-skill",
+      "name": "UI UX Pro Max Skill",
+      "kind": "resource",
+      "category": "skills",
+      "license": "MIT",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill",
+      "tags": [
+        "ui-ux",
+        "skill",
+        "recommendation",
+        "design-rules"
+      ],
+      "note": "검색·추천형 UI/UX 지식 구조 참고"
+    },
+    {
+      "id": "copilotkit-opengenerativeui",
+      "name": "OpenGenerativeUI",
+      "kind": "resource",
+      "category": "ai-ui",
+      "license": "MIT",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/CopilotKit/OpenGenerativeUI",
+      "tags": [
+        "generative-ui",
+        "skill",
+        "svg",
+        "html"
+      ],
+      "note": "선택적 Skill 로딩과 출력 decision matrix 참고"
+    },
+    {
+      "id": "sanredz-pollingsim-ui",
+      "name": "PollingSim UI",
+      "kind": "resource",
+      "category": "domain-ui",
+      "license": "Unknown",
+      "licenseStatus": "review-required",
+      "source": "github",
+      "url": "https://github.com/sanredz/PollingSim-UI",
+      "tags": [
+        "simulation",
+        "realtime",
+        "spatial"
+      ],
+      "note": "특수 도메인 UI 사례. 라이선스 확인 전 link-only"
+    },
+    {
+      "id": "nexu-io-open-design",
+      "name": "OpenDesign",
+      "kind": "resource",
+      "category": "design-system",
+      "license": "Apache-2.0",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/nexu-io/open-design",
+      "tags": [
+        "design-workspace",
+        "skills",
+        "templates"
+      ],
+      "note": "파일 기반 디자인 작업 공간 구조 참고"
+    },
+    {
+      "id": "ko9ma7-designblock-studio",
+      "name": "DesignBlock Studio",
+      "kind": "resource",
+      "category": "builder",
+      "license": "Unknown",
+      "licenseStatus": "review-required",
+      "source": "github",
+      "url": "https://github.com/ko9ma7/designblock-studio",
+      "tags": [
+        "blocks",
+        "styles",
+        "svg",
+        "export"
+      ],
+      "note": "블록×스타일 조합 및 SVG/PNG 출력 모델"
+    },
+    {
+      "id": "donnemartin-system-design-primer",
+      "name": "System Design Primer",
+      "kind": "resource",
+      "category": "architecture",
+      "license": "CC-BY-4.0",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/donnemartin/system-design-primer",
+      "tags": [
+        "architecture",
+        "knowledge",
+        "tradeoffs"
+      ],
+      "note": "지식 색인·trade-off 문서화 구조 참고"
+    },
+    {
+      "id": "designsystemlab-design-system",
+      "name": "Design System Lab",
+      "kind": "resource",
+      "category": "design-system",
+      "license": "Unknown",
+      "licenseStatus": "review-required",
+      "source": "github",
+      "url": "https://github.com/DesignSystemLab/design-system",
+      "tags": [
+        "design-system",
+        "reference"
+      ],
+      "note": "라이선스 확인 전 link-only"
+    },
+    {
+      "id": "shadcn-ui-ui",
+      "name": "shadcn/ui",
+      "kind": "resource",
+      "category": "components",
+      "license": "MIT",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/shadcn-ui/ui",
+      "tags": [
+        "react",
+        "typescript",
+        "open-code",
+        "registry"
+      ],
+      "note": ""
+    },
+    {
+      "id": "radix-ui-primitives",
+      "name": "Radix Primitives",
+      "kind": "resource",
+      "category": "components",
+      "license": "MIT",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/radix-ui/primitives",
+      "tags": [
+        "react",
+        "headless",
+        "accessibility"
+      ],
+      "note": ""
+    },
+    {
+      "id": "adobe-react-spectrum",
+      "name": "React Spectrum",
+      "kind": "resource",
+      "category": "components",
+      "license": "Apache-2.0",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/adobe/react-spectrum",
+      "tags": [
+        "react",
+        "accessibility",
+        "i18n"
+      ],
+      "note": ""
+    },
+    {
+      "id": "mui-base-ui",
+      "name": "Base UI",
+      "kind": "resource",
+      "category": "components",
+      "license": "MIT",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/mui/base-ui",
+      "tags": [
+        "react",
+        "headless",
+        "accessibility"
+      ],
+      "note": ""
+    },
+    {
+      "id": "tailwindlabs-headlessui",
+      "name": "Headless UI",
+      "kind": "resource",
+      "category": "components",
+      "license": "MIT",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/tailwindlabs/headlessui",
+      "tags": [
+        "react",
+        "vue",
+        "headless"
+      ],
+      "note": ""
+    },
+    {
+      "id": "storybookjs-storybook",
+      "name": "Storybook",
+      "kind": "resource",
+      "category": "documentation",
+      "license": "MIT",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/storybookjs/storybook",
+      "tags": [
+        "components",
+        "docs",
+        "testing"
+      ],
+      "note": ""
+    },
+    {
+      "id": "tailwindlabs-tailwindcss",
+      "name": "Tailwind CSS",
+      "kind": "resource",
+      "category": "css",
+      "license": "MIT",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/tailwindlabs/tailwindcss",
+      "tags": [
+        "css",
+        "utility",
+        "tokens"
+      ],
+      "note": ""
+    },
+    {
+      "id": "style-dictionary-style-dictionary",
+      "name": "Style Dictionary",
+      "kind": "resource",
+      "category": "tokens",
+      "license": "Apache-2.0",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/style-dictionary/style-dictionary",
+      "tags": [
+        "design-tokens",
+        "build"
+      ],
+      "note": ""
+    },
+    {
+      "id": "w3c-aria-practices",
+      "name": "WAI-ARIA APG",
+      "kind": "resource",
+      "category": "accessibility",
+      "license": "W3C",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/w3c/aria-practices",
+      "tags": [
+        "aria",
+        "keyboard",
+        "patterns"
+      ],
+      "note": ""
+    },
+    {
+      "id": "dequelabs-axe-core",
+      "name": "axe-core",
+      "kind": "resource",
+      "category": "accessibility",
+      "license": "MPL-2.0",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/dequelabs/axe-core",
+      "tags": [
+        "testing",
+        "a11y"
+      ],
+      "note": ""
+    },
+    {
+      "id": "mui-material-ui",
+      "name": "Material UI",
+      "kind": "resource",
+      "category": "components",
+      "license": "MIT",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/mui/material-ui",
+      "tags": [
+        "react",
+        "material"
+      ],
+      "note": ""
+    },
+    {
+      "id": "chakra-ui-chakra-ui",
+      "name": "Chakra UI",
+      "kind": "resource",
+      "category": "components",
+      "license": "MIT",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/chakra-ui/chakra-ui",
+      "tags": [
+        "react",
+        "design-system"
+      ],
+      "note": ""
+    },
+    {
+      "id": "ant-design-ant-design",
+      "name": "Ant Design",
+      "kind": "resource",
+      "category": "components",
+      "license": "MIT",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/ant-design/ant-design",
+      "tags": [
+        "react",
+        "enterprise"
+      ],
+      "note": ""
+    },
+    {
+      "id": "mantinedev-mantine",
+      "name": "Mantine",
+      "kind": "resource",
+      "category": "components",
+      "license": "MIT",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/mantinedev/mantine",
+      "tags": [
+        "react",
+        "hooks"
+      ],
+      "note": ""
+    },
+    {
+      "id": "microsoft-fluentui",
+      "name": "Fluent UI",
+      "kind": "resource",
+      "category": "design-system",
+      "license": "MIT",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/microsoft/fluentui",
+      "tags": [
+        "react",
+        "microsoft"
+      ],
+      "note": ""
+    },
+    {
+      "id": "carbon-design-system-carbon",
+      "name": "Carbon Design System",
+      "kind": "resource",
+      "category": "design-system",
+      "license": "Apache-2.0",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/carbon-design-system/carbon",
+      "tags": [
+        "enterprise",
+        "ibm"
+      ],
+      "note": ""
+    },
+    {
+      "id": "primer-react",
+      "name": "Primer React",
+      "kind": "resource",
+      "category": "design-system",
+      "license": "MIT",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/primer/react",
+      "tags": [
+        "react",
+        "github"
+      ],
+      "note": ""
+    },
+    {
+      "id": "alphagov-govuk-frontend",
+      "name": "GOV.UK Frontend",
+      "kind": "resource",
+      "category": "design-system",
+      "license": "MIT",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/alphagov/govuk-frontend",
+      "tags": [
+        "government",
+        "forms",
+        "accessibility"
+      ],
+      "note": ""
+    },
+    {
+      "id": "uswds-uswds",
+      "name": "USWDS",
+      "kind": "resource",
+      "category": "design-system",
+      "license": "CC0-1.0",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/uswds/uswds",
+      "tags": [
+        "government",
+        "patterns",
+        "accessibility"
+      ],
+      "note": ""
+    },
+    {
+      "id": "daangn-seed-design",
+      "name": "SEED Design",
+      "kind": "resource",
+      "category": "design-system",
+      "license": "Apache-2.0",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/daangn/seed-design",
+      "tags": [
+        "korean",
+        "tokens",
+        "multiplatform"
+      ],
+      "note": ""
+    },
+    {
+      "id": "channel-io-bezier-react",
+      "name": "Bezier React",
+      "kind": "resource",
+      "category": "design-system",
+      "license": "Apache-2.0",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/channel-io/bezier-react",
+      "tags": [
+        "korean",
+        "saas",
+        "react"
+      ],
+      "note": ""
+    },
+    {
+      "id": "heroui-inc-heroui",
+      "name": "HeroUI",
+      "kind": "resource",
+      "category": "components",
+      "license": "MIT",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/heroui-inc/heroui",
+      "tags": [
+        "react",
+        "tailwind"
+      ],
+      "note": ""
+    },
+    {
+      "id": "patternfly-patternfly-react",
+      "name": "PatternFly React",
+      "kind": "resource",
+      "category": "design-system",
+      "license": "MIT",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/patternfly/patternfly-react",
+      "tags": [
+        "enterprise",
+        "admin",
+        "react"
+      ],
+      "note": ""
+    },
+    {
+      "id": "ionic-team-ionic-framework",
+      "name": "Ionic Framework",
+      "kind": "resource",
+      "category": "components",
+      "license": "MIT",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/ionic-team/ionic-framework",
+      "tags": [
+        "mobile",
+        "web-components"
+      ],
+      "note": ""
+    },
+    {
+      "id": "twbs-bootstrap",
+      "name": "Bootstrap",
+      "kind": "resource",
+      "category": "css",
+      "license": "MIT",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/twbs/bootstrap",
+      "tags": [
+        "css",
+        "responsive",
+        "components"
+      ],
+      "note": ""
+    },
+    {
+      "id": "saadeghi-daisyui",
+      "name": "daisyUI",
+      "kind": "resource",
+      "category": "css",
+      "license": "MIT",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/saadeghi/daisyui",
+      "tags": [
+        "tailwind",
+        "themes",
+        "semantic"
+      ],
+      "note": ""
+    },
+    {
+      "id": "themesberg-flowbite",
+      "name": "Flowbite",
+      "kind": "resource",
+      "category": "css",
+      "license": "MIT",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/themesberg/flowbite",
+      "tags": [
+        "tailwind",
+        "components"
+      ],
+      "note": ""
+    },
+    {
+      "id": "picocss-pico",
+      "name": "Pico CSS",
+      "kind": "resource",
+      "category": "css",
+      "license": "MIT",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/picocss/pico",
+      "tags": [
+        "semantic-html",
+        "minimal"
+      ],
+      "note": ""
+    },
+    {
+      "id": "jgthms-bulma",
+      "name": "Bulma",
+      "kind": "resource",
+      "category": "css",
+      "license": "MIT",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/jgthms/bulma",
+      "tags": [
+        "css",
+        "layout"
+      ],
+      "note": ""
+    },
+    {
+      "id": "argyleink-open-props",
+      "name": "Open Props",
+      "kind": "resource",
+      "category": "tokens",
+      "license": "MIT",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/argyleink/open-props",
+      "tags": [
+        "css",
+        "custom-properties",
+        "tokens"
+      ],
+      "note": ""
+    },
+    {
+      "id": "adobe-spectrum-css",
+      "name": "Spectrum CSS",
+      "kind": "resource",
+      "category": "css",
+      "license": "Apache-2.0",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/adobe/spectrum-css",
+      "tags": [
+        "adobe",
+        "design-system"
+      ],
+      "note": ""
+    },
+    {
+      "id": "adobe-spectrum-web-components",
+      "name": "Spectrum Web Components",
+      "kind": "resource",
+      "category": "components",
+      "license": "Apache-2.0",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/adobe/spectrum-web-components",
+      "tags": [
+        "web-components",
+        "adobe"
+      ],
+      "note": ""
+    },
+    {
+      "id": "vaadin-web-components",
+      "name": "Vaadin Web Components",
+      "kind": "resource",
+      "category": "components",
+      "license": "Apache-2.0",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/vaadin/web-components",
+      "tags": [
+        "web-components",
+        "enterprise"
+      ],
+      "note": ""
+    },
+    {
+      "id": "lucide-icons-lucide",
+      "name": "Lucide",
+      "kind": "resource",
+      "category": "icons",
+      "license": "ISC",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/lucide-icons/lucide",
+      "tags": [
+        "svg",
+        "icons"
+      ],
+      "note": ""
+    },
+    {
+      "id": "tailwindlabs-heroicons",
+      "name": "Heroicons",
+      "kind": "resource",
+      "category": "icons",
+      "license": "MIT",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/tailwindlabs/heroicons",
+      "tags": [
+        "svg",
+        "icons"
+      ],
+      "note": ""
+    },
+    {
+      "id": "tabler-tabler-icons",
+      "name": "Tabler Icons",
+      "kind": "resource",
+      "category": "icons",
+      "license": "MIT",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/tabler/tabler-icons",
+      "tags": [
+        "svg",
+        "icons"
+      ],
+      "note": ""
+    },
+    {
+      "id": "phosphor-icons-core",
+      "name": "Phosphor Icons",
+      "kind": "resource",
+      "category": "icons",
+      "license": "MIT",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/phosphor-icons/core",
+      "tags": [
+        "svg",
+        "icons",
+        "weights"
+      ],
+      "note": ""
+    },
+    {
+      "id": "iconoir-icons-iconoir",
+      "name": "Iconoir",
+      "kind": "resource",
+      "category": "icons",
+      "license": "MIT",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/iconoir-icons/iconoir",
+      "tags": [
+        "svg",
+        "icons"
+      ],
+      "note": ""
+    },
+    {
+      "id": "feathericons-feather",
+      "name": "Feather",
+      "kind": "resource",
+      "category": "icons",
+      "license": "MIT",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/feathericons/feather",
+      "tags": [
+        "svg",
+        "icons",
+        "minimal"
+      ],
+      "note": ""
+    },
+    {
+      "id": "simple-icons-simple-icons",
+      "name": "Simple Icons",
+      "kind": "resource",
+      "category": "icons",
+      "license": "CC0-1.0",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/simple-icons/simple-icons",
+      "tags": [
+        "svg",
+        "brands",
+        "trademark-review"
+      ],
+      "note": "브랜드 상표권은 별도 검토"
+    },
+    {
+      "id": "remix-design-remixicon",
+      "name": "Remix Icon",
+      "kind": "resource",
+      "category": "icons",
+      "license": "Apache-2.0",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/Remix-Design/RemixIcon",
+      "tags": [
+        "svg",
+        "icons"
+      ],
+      "note": ""
+    },
+    {
+      "id": "twbs-icons",
+      "name": "Bootstrap Icons",
+      "kind": "resource",
+      "category": "icons",
+      "license": "MIT",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/twbs/icons",
+      "tags": [
+        "svg",
+        "icons"
+      ],
+      "note": ""
+    },
+    {
+      "id": "google-material-design-icons",
+      "name": "Material Design Icons",
+      "kind": "resource",
+      "category": "icons",
+      "license": "Apache-2.0",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/google/material-design-icons",
+      "tags": [
+        "svg",
+        "icons",
+        "material"
+      ],
+      "note": ""
+    },
+    {
+      "id": "chartjs-chart-js",
+      "name": "Chart.js",
+      "kind": "resource",
+      "category": "visualization",
+      "license": "MIT",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/chartjs/Chart.js",
+      "tags": [
+        "charts",
+        "canvas"
+      ],
+      "note": ""
+    },
+    {
+      "id": "apache-echarts",
+      "name": "Apache ECharts",
+      "kind": "resource",
+      "category": "visualization",
+      "license": "Apache-2.0",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/apache/echarts",
+      "tags": [
+        "charts",
+        "dashboard",
+        "svg",
+        "canvas"
+      ],
+      "note": ""
+    },
+    {
+      "id": "recharts-recharts",
+      "name": "Recharts",
+      "kind": "resource",
+      "category": "visualization",
+      "license": "MIT",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/recharts/recharts",
+      "tags": [
+        "react",
+        "charts"
+      ],
+      "note": ""
+    },
+    {
+      "id": "airbnb-visx",
+      "name": "visx",
+      "kind": "resource",
+      "category": "visualization",
+      "license": "MIT",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/airbnb/visx",
+      "tags": [
+        "react",
+        "d3",
+        "primitives"
+      ],
+      "note": ""
+    },
+    {
+      "id": "d3-d3",
+      "name": "D3",
+      "kind": "resource",
+      "category": "visualization",
+      "license": "ISC",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/d3/d3",
+      "tags": [
+        "svg",
+        "data-viz"
+      ],
+      "note": ""
+    },
+    {
+      "id": "plotly-plotly-js",
+      "name": "Plotly.js",
+      "kind": "resource",
+      "category": "visualization",
+      "license": "MIT",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/plotly/plotly.js",
+      "tags": [
+        "charts",
+        "scientific"
+      ],
+      "note": ""
+    },
+    {
+      "id": "motiondivision-motion",
+      "name": "Motion",
+      "kind": "resource",
+      "category": "motion",
+      "license": "MIT",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/motiondivision/motion",
+      "tags": [
+        "animation",
+        "react",
+        "gestures"
+      ],
+      "note": ""
+    },
+    {
+      "id": "formkit-auto-animate",
+      "name": "AutoAnimate",
+      "kind": "resource",
+      "category": "motion",
+      "license": "MIT",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/formkit/auto-animate",
+      "tags": [
+        "animation",
+        "layout"
+      ],
+      "note": ""
+    },
+    {
+      "id": "juliangarnier-anime",
+      "name": "Anime.js",
+      "kind": "resource",
+      "category": "motion",
+      "license": "MIT",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/juliangarnier/anime",
+      "tags": [
+        "animation",
+        "javascript"
+      ],
+      "note": ""
+    },
+    {
+      "id": "grapesjs-grapesjs",
+      "name": "GrapesJS",
+      "kind": "resource",
+      "category": "builder",
+      "license": "BSD-3-Clause",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/GrapesJS/grapesjs",
+      "tags": [
+        "visual-builder",
+        "html",
+        "css"
+      ],
+      "note": ""
+    },
+    {
+      "id": "prevwong-craft-js",
+      "name": "Craft.js",
+      "kind": "resource",
+      "category": "builder",
+      "license": "MIT",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/prevwong/craft.js",
+      "tags": [
+        "react",
+        "drag-drop",
+        "editor"
+      ],
+      "note": ""
+    },
+    {
+      "id": "puckeditor-puck",
+      "name": "Puck",
+      "kind": "resource",
+      "category": "builder",
+      "license": "MIT",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/puckeditor/puck",
+      "tags": [
+        "react",
+        "visual-editor"
+      ],
+      "note": ""
+    },
+    {
+      "id": "tabler-tabler",
+      "name": "Tabler",
+      "kind": "resource",
+      "category": "templates",
+      "license": "MIT",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/tabler/tabler",
+      "tags": [
+        "admin",
+        "dashboard",
+        "html"
+      ],
+      "note": ""
+    },
+    {
+      "id": "colorlibhq-adminlte",
+      "name": "AdminLTE",
+      "kind": "resource",
+      "category": "templates",
+      "license": "MIT",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/ColorlibHQ/AdminLTE",
+      "tags": [
+        "admin",
+        "bootstrap"
+      ],
+      "note": ""
+    },
+    {
+      "id": "coreui-coreui-free-bootstrap-admin-template",
+      "name": "CoreUI Free",
+      "kind": "resource",
+      "category": "templates",
+      "license": "MIT",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/coreui/coreui-free-bootstrap-admin-template",
+      "tags": [
+        "admin",
+        "bootstrap"
+      ],
+      "note": ""
+    },
+    {
+      "id": "tokens-studio-figma-plugin",
+      "name": "Tokens Studio",
+      "kind": "resource",
+      "category": "tokens",
+      "license": "MIT",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/tokens-studio/figma-plugin",
+      "tags": [
+        "figma",
+        "design-tokens"
+      ],
+      "note": ""
+    },
+    {
+      "id": "facebook-docusaurus",
+      "name": "Docusaurus",
+      "kind": "resource",
+      "category": "documentation",
+      "license": "MIT",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/facebook/docusaurus",
+      "tags": [
+        "docs",
+        "static-site"
+      ],
+      "note": ""
+    },
+    {
+      "id": "googlechrome-lighthouse",
+      "name": "Lighthouse",
+      "kind": "resource",
+      "category": "quality",
+      "license": "Apache-2.0",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/GoogleChrome/lighthouse",
+      "tags": [
+        "performance",
+        "a11y",
+        "seo"
+      ],
+      "note": ""
+    },
+    {
+      "id": "pa11y-pa11y",
+      "name": "Pa11y",
+      "kind": "resource",
+      "category": "accessibility",
+      "license": "LGPL-3.0-only",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/pa11y/pa11y",
+      "tags": [
+        "a11y",
+        "ci"
+      ],
+      "note": ""
+    },
+    {
+      "id": "vercel-ai",
+      "name": "Vercel AI SDK",
+      "kind": "resource",
+      "category": "ai-ui",
+      "license": "Apache-2.0",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/vercel/ai",
+      "tags": [
+        "ai",
+        "agents",
+        "typescript"
+      ],
+      "note": ""
+    },
+    {
+      "id": "assistant-ui-assistant-ui",
+      "name": "assistant-ui",
+      "kind": "resource",
+      "category": "ai-ui",
+      "license": "MIT",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/assistant-ui/assistant-ui",
+      "tags": [
+        "ai",
+        "chat",
+        "react"
+      ],
+      "note": ""
+    },
+    {
+      "id": "vercel-ai-chatbot",
+      "name": "Vercel AI Chatbot",
+      "kind": "resource",
+      "category": "ai-ui",
+      "license": "Apache-2.0",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/vercel/ai-chatbot",
+      "tags": [
+        "ai",
+        "chat",
+        "template"
+      ],
+      "note": ""
+    },
+    {
+      "id": "huggingface-chat-ui",
+      "name": "Hugging Face Chat UI",
+      "kind": "resource",
+      "category": "ai-ui",
+      "license": "Apache-2.0",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/huggingface/chat-ui",
+      "tags": [
+        "ai",
+        "chat",
+        "svelte"
+      ],
+      "note": ""
+    },
+    {
+      "id": "chatgptnextweb-nextchat",
+      "name": "NextChat",
+      "kind": "resource",
+      "category": "ai-ui",
+      "license": "MIT",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/ChatGPTNextWeb/NextChat",
+      "tags": [
+        "ai",
+        "chat",
+        "cross-platform"
+      ],
+      "note": ""
+    },
+    {
+      "id": "modelcontextprotocol-typescript-sdk",
+      "name": "MCP TypeScript SDK",
+      "kind": "resource",
+      "category": "ai-ui",
+      "license": "Mixed",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/modelcontextprotocol/typescript-sdk",
+      "tags": [
+        "mcp",
+        "typescript",
+        "agents"
+      ],
+      "note": "파일별 라이선스 재검증"
+    },
+    {
+      "id": "openai-openai-agents-js",
+      "name": "OpenAI Agents JS",
+      "kind": "resource",
+      "category": "ai-ui",
+      "license": "MIT",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/openai/openai-agents-js",
+      "tags": [
+        "agents",
+        "typescript"
+      ],
+      "note": ""
+    },
+    {
+      "id": "naver-egjs-flicking",
+      "name": "egjs Flicking",
+      "kind": "resource",
+      "category": "components",
+      "license": "MIT",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/naver/egjs-flicking",
+      "tags": [
+        "korean",
+        "carousel",
+        "gesture"
+      ],
+      "note": ""
+    },
+    {
+      "id": "nhn-tui-grid",
+      "name": "TUI Grid",
+      "kind": "resource",
+      "category": "components",
+      "license": "MIT",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/nhn/tui.grid",
+      "tags": [
+        "korean",
+        "data-grid"
+      ],
+      "note": ""
+    },
+    {
+      "id": "toss-create-ait-app",
+      "name": "create-ait-app",
+      "kind": "resource",
+      "category": "tooling",
+      "license": "Apache-2.0",
+      "licenseStatus": "reported-upstream",
+      "source": "github",
+      "url": "https://github.com/toss/create-ait-app",
+      "tags": [
+        "korean",
+        "vite",
+        "dx"
+      ],
+      "note": ""
+    }
+  ],
+  "skills": [
+    {
+      "id": "ui-resource-finder",
+      "title": "UI Resource Finder",
+      "summary": "상황·프레임워크·라이선스·접근성 조건으로 카탈로그에서 적합한 자료를 선택",
+      "tags": [
+        "search",
+        "routing",
+        "catalog"
+      ]
+    },
+    {
+      "id": "ui-a11y-review",
+      "title": "UI Accessibility Review",
+      "summary": "ARIA/APG와 WCAG 관점에서 인터랙션·키보드·포커스·상태를 검토",
+      "tags": [
+        "a11y",
+        "aria",
+        "wcag"
+      ]
+    },
+    {
+      "id": "dashboard-builder",
+      "title": "Dashboard Builder",
+      "summary": "KPI·필터·테이블·차트·밀도 높은 레이아웃을 조합",
+      "tags": [
+        "dashboard",
+        "analytics",
+        "data-viz"
+      ]
+    },
+    {
+      "id": "landing-page-builder",
+      "title": "Landing Page Builder",
+      "summary": "Hero·trust·features·pricing·FAQ·CTA 패턴을 목적에 맞게 조합",
+      "tags": [
+        "landing",
+        "marketing"
+      ]
+    },
+    {
+      "id": "svg-helper",
+      "title": "SVG Helper",
+      "summary": "아이콘·다이어그램·차트 SVG의 viewBox·접근성·최적화·테마 적용",
+      "tags": [
+        "svg",
+        "icons",
+        "diagram"
+      ]
+    },
+    {
+      "id": "design-system-advisor",
+      "title": "Design System Advisor",
+      "summary": "토큰·primitive·component·pattern 계층과 디자인 시스템 선택을 지원",
+      "tags": [
+        "design-system",
+        "tokens"
+      ]
+    },
+    {
+      "id": "responsive-ui-review",
+      "title": "Responsive UI Review",
+      "summary": "320~1440+ 폭에서 reflow·touch target·overflow·density를 점검",
+      "tags": [
+        "responsive",
+        "mobile"
+      ]
+    },
+    {
+      "id": "ai-ui-builder",
+      "title": "AI UI Builder",
+      "summary": "chat·reasoning·citations·tool state·approval·artifact UI를 설계",
+      "tags": [
+        "ai-ui",
+        "agent",
+        "chat"
+      ]
+    },
+    {
+      "id": "resource-license-checker",
+      "title": "Resource License Checker",
+      "summary": "source·license·notice·trademark·redistribution 상태를 확인",
+      "tags": [
+        "license",
+        "provenance"
+      ]
+    },
+    {
+      "id": "github-pages-publisher",
+      "title": "GitHub Pages Publisher",
+      "summary": "정적 경로·404·SEO·Actions·Pages 배포를 검증",
+      "tags": [
+        "github-pages",
+        "deployment"
+      ]
+    }
+  ],
+  "patterns": [
+    {
+      "id": "dialog",
+      "title": "Dialog / Modal",
+      "kind": "pattern",
+      "category": "overlay",
+      "summary": "포커스 트랩, ESC, labelledby, 배경 스크롤 제어"
+    },
+    {
+      "id": "command-palette",
+      "title": "Command Palette",
+      "kind": "pattern",
+      "category": "navigation",
+      "summary": "검색 가능한 빠른 명령, keyboard-first"
+    },
+    {
+      "id": "faceted-filter",
+      "title": "Faceted Filter",
+      "kind": "pattern",
+      "category": "search",
+      "summary": "다중 조건 필터와 active filter chips"
+    },
+    {
+      "id": "data-table",
+      "title": "Data Table",
+      "kind": "pattern",
+      "category": "data-display",
+      "summary": "정렬·필터·pagination·sticky header·dense mode"
+    },
+    {
+      "id": "kpi-card",
+      "title": "KPI Card",
+      "kind": "pattern",
+      "category": "data-display",
+      "summary": "현재값·변화율·비교 기준·sparkline"
+    },
+    {
+      "id": "dashboard-shell",
+      "title": "Dashboard Shell",
+      "kind": "pattern",
+      "category": "layout",
+      "summary": "sidebar·topbar·content grid·responsive collapse"
+    },
+    {
+      "id": "signup",
+      "title": "Signup",
+      "kind": "pattern",
+      "category": "authentication",
+      "summary": "progressive validation·password/passkey·verification"
+    },
+    {
+      "id": "login-recovery",
+      "title": "Login & Recovery",
+      "kind": "pattern",
+      "category": "authentication",
+      "summary": "SSO·password·recovery·error prevention"
+    },
+    {
+      "id": "onboarding-checklist",
+      "title": "Onboarding Checklist",
+      "kind": "pattern",
+      "category": "onboarding",
+      "summary": "progressive disclosure와 completion state"
+    },
+    {
+      "id": "global-search",
+      "title": "Global Search",
+      "kind": "pattern",
+      "category": "search",
+      "summary": "combobox·recent·suggestion·empty/error state"
+    },
+    {
+      "id": "file-upload",
+      "title": "File Upload",
+      "kind": "pattern",
+      "category": "forms",
+      "summary": "drag/drop·progress·retry·validation"
+    },
+    {
+      "id": "settings",
+      "title": "Settings",
+      "kind": "pattern",
+      "category": "forms",
+      "summary": "category nav·save state·danger zone"
+    },
+    {
+      "id": "toast-inbox",
+      "title": "Notification Feedback",
+      "kind": "pattern",
+      "category": "feedback",
+      "summary": "toast와 persistent inbox 역할 분리"
+    },
+    {
+      "id": "checkout",
+      "title": "Checkout",
+      "kind": "pattern",
+      "category": "commerce",
+      "summary": "address·delivery·payment·review·confirmation"
+    },
+    {
+      "id": "pricing",
+      "title": "Pricing",
+      "kind": "pattern",
+      "category": "marketing",
+      "summary": "tier comparison·billing toggle·featured plan"
+    },
+    {
+      "id": "ai-chat",
+      "title": "AI Chat",
+      "kind": "pattern",
+      "category": "ai-ui",
+      "summary": "message·composer·streaming·sources·attachments"
+    },
+    {
+      "id": "tool-approval",
+      "title": "Tool Approval",
+      "kind": "pattern",
+      "category": "ai-ui",
+      "summary": "pending·approved·rejected·error·audit context"
+    },
+    {
+      "id": "artifact-panel",
+      "title": "Artifact Panel",
+      "kind": "pattern",
+      "category": "ai-ui",
+      "summary": "chat와 결과물 preview/editor 분할"
+    },
+    {
+      "id": "empty-error-loading",
+      "title": "Empty / Error / Loading",
+      "kind": "pattern",
+      "category": "states",
+      "summary": "zero state·retry·skeleton·offline"
+    },
+    {
+      "id": "responsive-navigation",
+      "title": "Responsive Navigation",
+      "kind": "pattern",
+      "category": "navigation",
+      "summary": "desktop sidebar/nav를 mobile sheet/bottom nav로 변환"
+    }
+  ]
+}

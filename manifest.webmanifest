@@ -1,0 +1,17 @@
+{
+  "name": "AI UI Design Atlas",
+  "short_name": "UI Atlas",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#080b13",
+  "theme_color": "#6558ff",
+  "icons": [
+    {
+      "src": "./assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

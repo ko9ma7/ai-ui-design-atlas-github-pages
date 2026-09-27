@@ -1,66 +1,50 @@
-# AI UI Design Atlas — 128 UI Styles
+# AI UI Design Atlas
 
-> 같은 AI 일정 관리 대시보드를 **128가지 UI 디자인 스타일**로 비교하는 정적 레퍼런스 사이트입니다.
+UI/UX, HTML/CSS, SVG, 디자인 시스템, 접근성, 데이터 시각화, AI-native UI와 재사용 가능한 Agent Skill을 한곳에서 찾기 위한 **Git 기반 Resource Vault**입니다.
 
-“깔끔하게”, “세련되게”, “요즘 스타일로”처럼 추상적으로 요청하는 대신, **정확한 디자인 언어의 이름과 핵심 문법**을 AI 프롬프트에 넣을 수 있도록 만들었습니다.
+## Live
 
-## Live demo
+GitHub Pages: https://ko9ma7.github.io/ai-ui-design-atlas-github-pages/
 
-GitHub Pages를 활성화하면 아래 형식으로 공개됩니다.
+## 핵심 구조
 
-`(https://ko9ma7.github.io/ai-ui-design-atlas-github-pages/)`
+- **Catalog-first**: 원본을 무작정 복제하지 않고 메타데이터와 provenance를 먼저 관리합니다.
+- **Pointer-first**: 라이선스가 불명확한 자료는 link-only로 유지합니다.
+- **Vendor-last**: 실제 코드/에셋 vendoring은 라이선스 검토 후에만 합니다.
+- **Agent-ready**: `SKILL.md`, `AGENTS.md`, `CLAUDE.md`를 통해 Codex/Claude Code/기타 에이전트에서 같은 원칙을 재사용합니다.
+- **Static-first**: GitHub Pages에서 별도 백엔드 없이 동작합니다.
 
-## 주요 기능
+## 현재 데이터
 
-- 128가지 UI 스타일 / 16개 카테고리
-- 모든 스타일을 **동일한 AI 일정 관리 대시보드**로 비교
-- 스타일명·키워드·추천 분야 검색
-- 카테고리 필터 / 정렬
-- 즐겨찾기(LocalStorage)
-- 최대 4개 스타일 나란히 비교
-- 스타일별 AI 디자인 프롬프트 복사
-- 특정 스타일 URL 공유(`#style-...`)
-- 반응형 모바일 레이아웃
-- 빌드 도구와 외부 라이브러리 없이 `index.html` 단독 실행
+- Research source registry: 79개
+- Canonical agent skills: 10개
+- Atomic UI/UX patterns: 20개
+- 데이터 원본: `data/catalog.json`
 
-## GitHub Pages 배포
+> 현재 license 값은 제공된 Deep Research 보고서에서 정규화한 초기 메타데이터입니다. 실제 코드나 에셋을 저장소로 가져오기 전에는 upstream의 현재 LICENSE/NOTICE를 다시 검증해야 합니다.
 
-1. 이 폴더의 파일을 GitHub 저장소 루트에 업로드합니다.
-2. GitHub 저장소에서 **Settings → Pages**로 이동합니다.
-3. **Build and deployment → Source**를 `Deploy from a branch`로 선택합니다.
-4. Branch를 `main`, Folder를 `/(root)`로 지정하고 저장합니다.
-5. 잠시 후 표시되는 GitHub Pages 주소를 열면 됩니다.
+## 로컬 실행
 
-## 저장소 설명 문구
+정적 파일만 사용하므로 아무 HTTP server로 실행할 수 있습니다.
 
-> 같은 AI 대시보드로 비교하는 128가지 UI 디자인 스타일 레퍼런스 — 검색, 필터, 비교, AI 프롬프트 복사 지원.
-
-## GitHub Pages 소개 문구
-
-> “깔끔하게” 대신 정확한 디자인 언어를 선택하세요. 미니멀리즘부터 글래스모피즘, 브루탈리즘, Y2K, 사이버펑크, 에디토리얼까지 128가지 스타일을 같은 화면으로 비교할 수 있습니다.
-
-## 공유용 문구
-
-> AI에게 UI를 부탁할 때 ‘세련되게’만 말하면 결과가 비슷해집니다. 128가지 디자인 스타일을 같은 대시보드로 비교하고, 마음에 드는 스타일의 프롬프트를 바로 복사해보세요.
-
-## 추천 GitHub Topics
-
-`ui-design` `design-system` `ui-inspiration` `frontend` `css` `github-pages` `ai-prompts` `design-reference`
-
-## 구조
-
-```text
-.
-├── index.html   # 전체 사이트(HTML + CSS + JS + 128 스타일 데이터)
-├── README.md    # 프로젝트 소개 / 배포 방법 / 공유 문구
-├── LICENSE      # MIT License
-└── .nojekyll    # GitHub Pages에서 Jekyll 처리 방지
+```bash
+python -m http.server 8080
 ```
 
-## 커스터마이징
+또는 VS Code Live Server 등을 사용할 수 있습니다.
 
-`index.html`의 `styles` 배열은 스타일 데이터, CSS의 `.fx-*` / `.layout-*` 클래스는 시각 효과와 레이아웃 계열을 담당합니다. 새로운 스타일을 추가하려면 기존 스타일 객체를 복제한 뒤 이름, 카테고리, 색상, `fx`, `layout`, 프롬프트를 수정하면 됩니다.
+## 배포
+
+`main`에 push하면 GitHub Pages 소스 설정에 따라 정적 페이지가 갱신됩니다. Actions 기반 Pages를 사용할 경우 `.github/workflows/pages.yml`을 사용합니다.
+
+## 데이터 정책
+
+1. 공식 upstream URL을 우선합니다.
+2. 재배포 권한이 불명확하면 코드/SVG/이미지를 복제하지 않습니다.
+3. vendored/snippet 자료는 source commit, license, notice, modification 정보를 보존합니다.
+4. 브랜드 SVG는 오픈 라이선스와 별개로 trademark 상태를 검토합니다.
+5. 외부 Skill/HTML/SVG는 실행 전에 보안 검토합니다.
 
 ## License
 
-MIT
+이 저장소에서 새로 작성한 코드와 문서는 MIT License를 따릅니다. 제3자 자료는 각 upstream license를 따르며 `THIRD_PARTY_NOTICES.md`와 개별 provenance가 우선합니다.
