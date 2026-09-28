@@ -2,11 +2,32 @@ const $=s=>document.querySelector(s);
 const $$=s=>[...document.querySelectorAll(s)];
 const saved=(k,fallback)=>localStorage.getItem(k)||fallback;
 const state={
-  items:[],query:"",kind:"",category:"",license:"",favoritesOnly:false,sort:"relevance",tag:"",
+  items:[],query:"",kind:"",category:"",license:"",favoritesOnly:false,sort:"relevance",tag:"",style:saved("atlas:style","atlas"),
   view:saved("atlas:view","grid"),density:saved("atlas:density","compact"),columns:saved("atlas:columns","auto"),preview:saved("atlas:preview","on"),
   favorites:new Set(JSON.parse(localStorage.getItem("atlas:favorites")||"[]")),compare:new Set()
 };
 const ghCache=new Map();
+const stylePresets=[
+  {id:"atlas",label:"Atlas",desc:"현재 기본 디자인 · 균형 잡힌 카탈로그",colors:["#f7f8fc","#ffffff","#6757ff","#101522"]},
+  {id:"glass",label:"Glass",desc:"반투명 레이어와 부드러운 빛",colors:["#eef2ff","#d9d2ff","#6d5dfc","#171528"]},
+  {id:"y2k",label:"Y2K",desc:"버블 형태와 핑크·시안 포인트",colors:["#f8f1ff","#f6dcff","#ff4fd8","#231737"]},
+  {id:"brutal",label:"Brutal",desc:"굵은 선·강한 대비·하드 섀도",colors:["#fffdf2","#ffe600","#5b34ff","#090909"]},
+  {id:"minimal",label:"Minimal",desc:"최소 장식과 높은 정보 집중도",colors:["#fafafa","#f4f4f4","#111111","#111111"]},
+  {id:"neo",label:"Neo",desc:"제품형 블루·민트 인터페이스",colors:["#eef6ff","#dcecff","#1668dc","#10233f"]},
+  {id:"bauhaus",label:"Bauhaus",desc:"기하학과 원색 기반의 구조적 표현",colors:["#f7f4ec","#f4d93f","#e43d30","#111111"]},
+  {id:"clay",label:"Clay",desc:"두꺼운 곡면과 따뜻한 소프트 섀도",colors:["#f6eee8","#f3e1d6","#e56f63","#402f2b"]},
+  {id:"editorial",label:"Editorial",desc:"세리프 타이포와 잡지형 위계",colors:["#f7f4ee","#eeeae1","#8c2f39","#1b1b18"]},
+  {id:"cyber",label:"Cyber",desc:"네온 그린·모노스페이스·그리드",colors:["#050709","#111923","#64ff8f","#e7fff4"]},
+  {id:"pastel",label:"Pastel",desc:"라벤더·민트·핑크의 부드러운 팔레트",colors:["#f9f4ff","#f0e8ff","#9a74e8","#332941"]},
+  {id:"blueprint",label:"Blueprint",desc:"청사진 그리드와 기술 문서 감성",colors:["#0a2a48","#114267","#6dd5ff","#f0f9ff"]},
+  {id:"luxe",label:"Luxe",desc:"딥 브라운·골드의 프리미엄 톤",colors:["#11100f","#231f1a","#d4ad67","#f4ead8"]},
+  {id:"swiss",label:"Swiss",desc:"정렬·타이포 중심의 모던 그리드",colors:["#f5f5f3","#efefec","#e32620","#111111"]},
+  {id:"soft-ui",label:"Soft UI",desc:"뉴모피즘 기반의 볼륨감 있는 표면",colors:["#e9eef6","#e1e7f0","#6479e8","#263348"]},
+  {id:"retro",label:"Retro",desc:"크림·오렌지·틸의 빈티지 인쇄 감성",colors:["#f4e7c3","#e9d6a6","#d95d39","#2a2a1f"]},
+  {id:"mono",label:"Mono",desc:"흑백 대비와 모노스페이스 정보성",colors:["#ffffff","#f1f1f1","#000000","#000000"]},
+  {id:"gradient",label:"Gradient",desc:"보라·핑크·시안 그라디언트",colors:["#f7f4ff","#eef6ff","#7c3aed","#211737"]},
+  {id:"paper",label:"Paper",desc:"따뜻한 종이 질감과 문서형 분위기",colors:["#f4efe3","#efe6d2","#8a5a32","#312d25"]}
+];
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const norm=s=>String(s??"").toLowerCase();
 const safeUrl=u=>{try{const x=new URL(u,location.href);return /^https?:$/.test(x.protocol)?x.href:""}catch{return""}};
@@ -19,6 +40,18 @@ const curated={
 };
 function applyTheme(v){const root=document.documentElement;const theme=v==="system"?(matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light"):v;root.dataset.theme=theme;localStorage.setItem("atlas:theme",v)}
 function cycleTheme(){const v=localStorage.getItem("atlas:theme")||"system";applyTheme(v==="system"?"dark":v==="dark"?"light":"system")}
+function renderStylePresets(){
+  const host=$("#stylePresetGrid");if(!host)return;
+  host.innerHTML=stylePresets.map(s=>'<button type="button" class="style-option '+(state.style===s.id?"active":"")+'" data-style-preset="'+s.id+'" aria-pressed="'+(state.style===s.id?"true":"false")+'" style="--p1:'+s.colors[0]+';--p2:'+s.colors[1]+';--p3:'+s.colors[2]+';--p4:'+s.colors[3]+'"><span class="style-swatch" aria-hidden="true"></span><span><strong>'+s.label+'</strong><small>'+s.desc+'</small></span></button>').join("");
+}
+function applyStyle(id){
+  const preset=stylePresets.find(s=>s.id===id)||stylePresets[0];
+  state.style=preset.id;
+  document.documentElement.dataset.style=preset.id;
+  localStorage.setItem("atlas:style",preset.id);
+  const label=$("#styleLabel");if(label)label.textContent=preset.label;
+  renderStylePresets();
+}
 function applyDisplay(){
   const root=document.documentElement;
   root.dataset.view=state.view;root.dataset.density=state.density;root.dataset.columns=state.columns;root.dataset.preview=state.preview;
@@ -126,7 +159,7 @@ function clearOne(key){
   render()
 }
 async function init(){
-  applyTheme(localStorage.getItem("atlas:theme")||"system");applyDisplay();
+  applyTheme(localStorage.getItem("atlas:theme")||"system");applyStyle(state.style);applyDisplay();
   const data=await fetch("./data/catalog.json").then(r=>{if(!r.ok)throw new Error("catalog load failed");return r.json()});
   const res=data.resources.map(x=>({...x,kind:"resource"})),skills=data.skills.map(x=>({...x,kind:"skill",category:"agent-skill",license:"Project"})),patterns=data.patterns.map(x=>({...x,license:"Project",tags:[x.category]}));
   state.items=[...res,...skills,...patterns];
@@ -145,6 +178,8 @@ $("#sortSelect").onchange=e=>{state.sort=e.target.value;render()};
 $("#resetBtn").onclick=resetFilters;$("#emptyReset").onclick=resetFilters;
 $("#themeBtn").onclick=cycleTheme;
 $("#aboutBtn").onclick=()=>$("#aboutDialog").showModal();
+$("#styleBtn").onclick=()=>{renderStylePresets();$("#styleDialog").showModal()};
+$("#stylePresetGrid").addEventListener("click",e=>{const b=e.target.closest("[data-style-preset]");if(!b)return;applyStyle(b.dataset.stylePreset);$("#styleDialog").close()});
 $("#favoritesQuick").onclick=()=>{state.favoritesOnly=!state.favoritesOnly;$("#favoritesOnly").checked=state.favoritesOnly;render()};
 $("#filterToggle").onclick=()=>{const p=$("#filterPanel"),open=p.classList.toggle("open");$("#filterToggle").setAttribute("aria-expanded",open?"true":"false")};
 $$("[data-view]").forEach(b=>b.onclick=()=>{state.view=b.dataset.view;applyDisplay()});
