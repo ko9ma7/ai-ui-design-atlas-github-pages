@@ -1,14 +1,14 @@
 <!doctype html>
-<html lang="ko" data-theme="system">
+<html lang="ko" data-theme="system" data-view="grid" data-density="compact" data-columns="auto" data-preview="on">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>AI UI Design Atlas — UI/UX Skill & Resource Vault</title>
-  <meta name="description" content="UI/UX, HTML, SVG, 디자인 시스템, 접근성, AI UI 자료와 재사용 가능한 Skill을 검색하는 Git 기반 카탈로그.">
-  <meta name="theme-color" content="#0b1020">
+  <meta name="description" content="UI/UX, HTML/CSS, SVG, 디자인 시스템, 접근성, AI UI 자료와 재사용 가능한 Skill을 빠르게 탐색하는 시각적 카탈로그.">
+  <meta name="theme-color" content="#f7f8fc">
   <link rel="canonical" href="https://ko9ma7.github.io/ai-ui-design-atlas-github-pages/">
   <meta property="og:title" content="AI UI Design Atlas">
-  <meta property="og:description" content="Searchable UI/UX Skill & Resource Vault for humans and coding agents.">
+  <meta property="og:description" content="Visual-first UI/UX Skill & Resource Vault for humans and coding agents.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ko9ma7.github.io/ai-ui-design-atlas-github-pages/">
   <meta name="twitter:card" content="summary_large_image">
@@ -17,67 +17,113 @@
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-<a class="skip" href="#main">본문으로 건너뛰기</a>
+<a class="skip" href="#catalog">카탈로그로 건너뛰기</a>
+
 <header class="topbar">
   <a class="brand" href="./" aria-label="AI UI Design Atlas 홈">
     <span class="brand-mark" aria-hidden="true">A</span>
     <span><strong>AI UI Design Atlas</strong><small>Skill & Resource Vault</small></span>
   </a>
   <nav class="top-actions" aria-label="주요 작업">
+    <button id="aboutBtn" class="text-btn" type="button">About</button>
     <button id="themeBtn" class="icon-btn" type="button" aria-label="테마 변경">◐</button>
     <a class="button ghost" href="https://github.com/ko9ma7/ai-ui-design-atlas-github-pages">GitHub</a>
   </nav>
 </header>
 
 <main id="main">
-  <section class="hero">
-    <div class="eyebrow">CATALOG-FIRST · POINTER-FIRST · VENDOR-LAST</div>
-    <h1>필요한 UI 지식을<br><span>찾아서 바로 붙이는</span> 디자인 아틀라스</h1>
-    <p>UI/UX 패턴, 디자인 시스템, HTML/CSS, SVG, 접근성, 데이터 시각화, AI-native UI와 Agent Skill을 하나의 검색 가능한 정적 카탈로그로 관리합니다.</p>
-    <div class="hero-search">
-      <label for="search" class="sr-only">카탈로그 검색</label>
-      <input id="search" type="search" placeholder="예: accessible dialog, dashboard, SVG, AI chat…" autocomplete="off">
-      <kbd>/</kbd>
+  <section class="compact-hero" aria-labelledby="heroTitle">
+    <div class="hero-copy">
+      <div class="eyebrow">VISUAL UI/UX RESOURCE ATLAS</div>
+      <h1 id="heroTitle">찾고, 비교하고, <span>바로 적용하세요.</span></h1>
+      <p>디자인 시스템 · UI 패턴 · HTML/CSS · SVG · 접근성 · AI UI · Agent Skill을 한곳에서 탐색합니다.</p>
     </div>
-    <div id="quickTags" class="chips" aria-label="빠른 필터"></div>
-  </section>
-
-  <section class="about-site" aria-labelledby="aboutTitle">
-    <div>
-      <div class="eyebrow">ABOUT THE ATLAS</div>
-      <h2 id="aboutTitle">찾고, 보고, 이해하고,<br>에이전트에 바로 연결합니다.</h2>
-    </div>
-    <div class="about-site-copy">
-      <p><strong>AI UI Design Atlas</strong>는 UI/UX, 디자인 시스템, HTML/CSS, SVG, 접근성, 데이터 시각화, AI-native UI와 프런트엔드 아키텍처 자료를 한곳에서 탐색하기 위한 오픈 카탈로그입니다.</p>
-      <p>단순 링크 모음이 아니라 각 GitHub 프로젝트의 <b>About 정보, README 핵심 내용, 대표 이미지·스크린샷, 라이선스, 태그, 사용 맥락</b>을 함께 보여주고, 필요한 자료를 Codex·Claude Code 등 코딩 에이전트의 작업 컨텍스트로 빠르게 연결하는 것을 목표로 합니다.</p>
-      <div class="about-pill-row"><span>Visual-first discovery</span><span>README-aware</span><span>License-aware</span><span>Agent-ready</span></div>
-    </div>
-  </section>
-
-  <section class="stats" aria-label="카탈로그 통계">
-    <article><strong id="resourceCount">—</strong><span>Resources</span></article>
-    <article><strong id="skillCount">—</strong><span>Agent Skills</span></article>
-    <article><strong id="patternCount">—</strong><span>Patterns</span></article>
-    <article><strong id="favoriteCount">0</strong><span>Favorites</span></article>
-  </section>
-
-  <section class="workspace">
-    <aside class="filters" aria-label="필터">
-      <div class="filter-head"><strong>Filters</strong><button id="resetBtn" type="button">초기화</button></div>
-      <label>종류<select id="kindFilter"><option value="">전체</option><option value="resource">Resource</option><option value="skill">Skill</option><option value="pattern">Pattern</option></select></label>
-      <label>카테고리<select id="categoryFilter"><option value="">전체</option></select></label>
-      <label>라이선스<select id="licenseFilter"><option value="">전체</option></select></label>
-      <label class="check"><input id="favoritesOnly" type="checkbox"> 즐겨찾기만</label>
-      <div class="filter-note">라이선스가 <b>Unknown</b>인 항목은 원본 링크만 제공하며 코드/에셋을 직접 수집하지 않습니다.</div>
-    </aside>
-
-    <div class="results">
-      <div class="results-head">
-        <div><span id="resultCount">0</span> items</div>
-        <select id="sortSelect" aria-label="정렬"><option value="relevance">관련도</option><option value="name">이름</option><option value="category">카테고리</option></select>
+    <div class="hero-tools">
+      <div class="hero-search">
+        <label for="search" class="sr-only">카탈로그 검색</label>
+        <span class="search-icon" aria-hidden="true">⌕</span>
+        <input id="search" type="search" placeholder="dialog, dashboard, SVG, AI chat…" autocomplete="off">
+        <kbd>/</kbd>
       </div>
-      <div id="grid" class="grid" aria-live="polite"></div>
-      <div id="empty" class="empty" hidden><strong>검색 결과가 없습니다.</strong><span>검색어나 필터를 바꿔보세요.</span></div>
+      <div id="quickTags" class="chips" aria-label="빠른 필터"></div>
+    </div>
+  </section>
+
+  <section id="catalog" class="catalog-shell" aria-label="리소스 카탈로그">
+    <div class="catalog-topline">
+      <div class="catalog-summary">
+        <strong><span id="resultCount">0</span> items</strong>
+        <span class="dot">·</span>
+        <span><b id="resourceCount">—</b> resources</span>
+        <span><b id="skillCount">—</b> skills</span>
+        <span><b id="patternCount">—</b> patterns</span>
+        <button id="favoritesQuick" class="summary-fav" type="button">★ <b id="favoriteCount">0</b></button>
+      </div>
+
+      <div class="display-controls" aria-label="보기 설정">
+        <button id="filterToggle" class="control-btn mobile-filter-btn" type="button" aria-expanded="false">필터</button>
+        <div class="segmented" role="group" aria-label="보기 방식">
+          <button type="button" data-view="gallery" title="큰 이미지 갤러리">▧<span>Gallery</span></button>
+          <button type="button" data-view="grid" class="active" title="기본 카드 그리드">▦<span>Grid</span></button>
+          <button type="button" data-view="compact" title="고밀도 카드">▥<span>Compact</span></button>
+          <button type="button" data-view="list" title="리스트">☷<span>List</span></button>
+        </div>
+        <label class="mini-select" title="한 줄 카드 수"><span>열</span>
+          <select id="columnSelect" aria-label="카드 열 수">
+            <option value="auto">Auto</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </label>
+        <label class="mini-select" title="카드 정보 밀도"><span>밀도</span>
+          <select id="densitySelect" aria-label="정보 밀도">
+            <option value="compact">Compact</option>
+            <option value="comfortable">Comfortable</option>
+          </select>
+        </label>
+        <button id="previewToggle" class="control-btn active" type="button" aria-pressed="true" title="카드 이미지 표시">Preview</button>
+        <select id="sortSelect" class="sort-select" aria-label="정렬">
+          <option value="relevance">관련도</option>
+          <option value="name">이름</option>
+          <option value="category">카테고리</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="catalog-body">
+      <aside id="filterPanel" class="filters" aria-label="필터">
+        <div class="filter-head">
+          <div><strong>Filters</strong><span>빠르게 좁혀보기</span></div>
+          <button id="resetBtn" type="button">초기화</button>
+        </div>
+        <label>종류
+          <select id="kindFilter">
+            <option value="">전체</option>
+            <option value="resource">Resource</option>
+            <option value="skill">Skill</option>
+            <option value="pattern">Pattern</option>
+          </select>
+        </label>
+        <label>카테고리<select id="categoryFilter"><option value="">전체</option></select></label>
+        <label>라이선스<select id="licenseFilter"><option value="">전체</option></select></label>
+        <label class="check"><input id="favoritesOnly" type="checkbox"> 즐겨찾기만 보기</label>
+        <details class="filter-help">
+          <summary>라이선스 정책</summary>
+          <p><b>Unknown</b> 또는 검토가 필요한 항목은 원본 링크 중심으로 제공하며 코드·에셋을 직접 수집하지 않습니다.</p>
+        </details>
+      </aside>
+
+      <section class="results" aria-label="검색 결과">
+        <div id="activeFilters" class="active-filters" aria-live="polite"></div>
+        <div id="grid" class="grid" aria-live="polite"></div>
+        <div id="empty" class="empty" hidden>
+          <strong>검색 결과가 없습니다.</strong>
+          <span>검색어나 필터를 바꾸거나 초기화해 보세요.</span>
+          <button id="emptyReset" class="button ghost" type="button">필터 초기화</button>
+        </div>
+      </section>
     </div>
   </section>
 </main>
@@ -87,6 +133,15 @@
   <button id="compareOpen" class="button" type="button">비교 보기</button>
   <button id="compareClear" class="button ghost" type="button">비우기</button>
 </div>
+
+<dialog id="aboutDialog" class="dialog about-dialog">
+  <form method="dialog"><button class="dialog-close" aria-label="닫기">×</button></form>
+  <div class="section-kicker">ABOUT THE ATLAS</div>
+  <h2>UI를 다루는 자료를<br>UI답게 탐색합니다.</h2>
+  <p>AI UI Design Atlas는 UI/UX, 디자인 시스템, HTML/CSS, SVG, 접근성, 데이터 시각화, AI-native UI와 프런트엔드 아키텍처 자료를 한곳에서 탐색하기 위한 오픈 카탈로그입니다.</p>
+  <p>GitHub About, README 핵심 내용, 대표 이미지·스크린샷, 라이선스, 태그와 사용 맥락을 함께 보여주고 Codex·Claude Code 등 코딩 에이전트의 작업 컨텍스트로 연결합니다.</p>
+  <div class="about-pill-row"><span>Visual-first</span><span>README-aware</span><span>License-aware</span><span>Agent-ready</span></div>
+</dialog>
 
 <dialog id="detailDialog" class="dialog">
   <form method="dialog"><button class="dialog-close" aria-label="닫기">×</button></form>
@@ -99,7 +154,7 @@
 </dialog>
 
 <footer>
-  <p>Source-first catalog. 제3자 자료는 각 원본 라이선스를 따릅니다.</p>
+  <p>Source-first catalog · 제3자 자료는 각 원본 라이선스를 따릅니다.</p>
   <p><a href="./THIRD_PARTY_NOTICES.md">Third-party notices</a> · <a href="./SKILL.md">Master Skill</a></p>
 </footer>
 <script src="./app.js" defer></script>
